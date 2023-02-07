@@ -1,0 +1,164 @@
+@font-face {
+    font-family: Sahel;
+    src: url('../fonts/Sahil/Sahel.eot'),
+        url('../fonts/Sahil/Sahel.woff'),
+        url('../fonts/Sahil/Sahel.woff2') format('truetype');
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.employees-form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.employees-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.employees-form input[type="text"],
+input[type="date"],
+input[type="file"],
+select#education_degree,
+select#state,
+select#degree,
+select#department,
+select#faculty,
+select#shift,
+select#job {
+    width: calc(100% - .5rem);
+    background-color: rgb(240, 240, 240);
+}
+
+
+#not-found-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    background-image: url('../images/p404.png');
+    color: #fff;
+}
+
+#not-found-page #link {
+    background-color: chartreuse;
+}
+
+
+#position-absolute {
+    position: absolute;
+    top: 7rem;
+    left: 15rem;
+    width: 15rem;
+}
+
+.id-card {
+    width: 3.39in;
+    height: 2.13in;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 30px 10px;
+}
+
+.id-card header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(48, 85, 155);
+    color: #fff;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body main {
+    width: 70%;
+    position: relative;
+}
+
+/* .card-body main img {
+    opacity: .3;
+    display: block;
+    margin: 0 auto;
+    width: 49%;
+} */
+
+.card-body main p {
+    position: absolute;
+}
+
+.card-body main p#fullname {
+    top: 1px;
+}
+
+.card-body main p#job_name {
+    top: 1.8rem;
+}
+
+.card-body main p#job_location {
+    top: 3.6rem;
+}
+
+.card-body main p#start_of_job {
+    top: 5.4rem;
+}
+
+.card-body main p {
+    font-size: small;
+    font-weight: bold;
+}
+
+.id-card footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.15rem;
+    border-radius: 0 0 10px 10px;
+    background-color: rgb(48, 85, 155);
+    color: #fff;
+    font-size: small;
+}
+
+.card-body aside {
+    width: 22%;
+}
+
+.card-body aside img {
+    width: 4.5rem;
+    height: 6rem;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+/* .card-body aside p{
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(48, 85, 155);
+    color: #fff;
+    border-radius: 2px;
+} */
+
+/* ========================================================= */
+
+
+@media print {
+    body {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
