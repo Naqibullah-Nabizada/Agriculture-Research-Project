@@ -8,10 +8,10 @@
     <section id="main-page">
         <header id="main-page-header">
             <div>
-                <h5 class="col-12 mx-auto text-center mt-3">ریاست پوهنتون کابل</h5>
-                <h5 class="col-12 mx-auto text-center">معاونیت امور محصلان</h5>
-                <h5 class="col-12 mx-auto text-center">آمریت تحقیقات و مجله علمی</h5>
-                <h5 class="col-12 mx-auto text-center">سیستم ثبت تحقیقات کادر علمی</h5>
+                <h5 class="col-12 mx-auto text-center mt-3">د کابل پوهنتون ریاست</h5>
+                <h5 class="col-12 mx-auto text-center"> کرنې پوهنځي </h5>
+                <h5 class="col-12 mx-auto text-center"> د څیړنیز فارم آمریت</h5>
+                <h5 class="col-12 mx-auto text-center"> د زده کړیالانو د څیړنو د ثبت سیستم </h5>
             </div>
         </header>
         <hr>

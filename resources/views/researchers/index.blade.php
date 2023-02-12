@@ -20,8 +20,7 @@
 
                 <hr>
                 @if ($researchers->count() > 0)
-                    <table class="table table-sm table-bordered table-responsive table-striped text-center"
-                        style="font-size: .8rem;;">
+                    <table class="table table-sm table-bordered table-responsive table-striped text-center">
                         <thead class="table-dark">
                             <tr>
                                 <th>نوم</th>
@@ -61,7 +60,7 @@
                                     <td>{{ $researcher->treatments }}</td>
                                     <td>{{ $researcher->dublocate == 0 ? 'تائید شده' : 'تائید نشده' }}</td>
                                     <td>
-                                        <img src="{{ asset('files/photos/' . $researcher->photo) }}" width="50">
+                                        <img src="{{ asset('files/photos/' . $researcher->photo) }}" width="30" height="40">
                                     </td>
                                     <td>{{ $researcher->soft == null ? 'ندارد' : 'دارد' }}</td>
                                     <td class="text-center">

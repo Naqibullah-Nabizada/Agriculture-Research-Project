@@ -7,11 +7,11 @@
 @section('content')
     <section class="col-12">
 
-        <div class="col-6" style="margin: 0 11rem">
+        <div class="col-5" style="margin: 0 11rem">
             <div class="mb-2">
                 <h5 class="text-center pt-5 pb-3">لیست دیپارتمنت های پوهنتون کابل</h5>
                 <hr>
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped table-sm">
                     <thead class="table-dark">
                         <tr>
                             <th>شناسه</th>
