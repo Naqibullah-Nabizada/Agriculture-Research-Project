@@ -59,7 +59,7 @@
                         <label class="form-label">لارښود استاد</label>
                         <select name="teacher_id" class="form-control mb-2">
                             @foreach ($teachers as $teacher)
-                                <option value="{{ $teacher->id }}">{{ $teacher->firstname }}</option>
+                                <option value="{{ $teacher->id }}">{{ $teacher->firstname." ". $teacher->lastname }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -116,8 +116,13 @@
                     </div>
 
                     <div class="col-4">
-                        <label class="form-label">د پلاټ اندازه/ m2</label>
-                        <input type="text" name="plot_size" class="form-control mb-2" placeholder="د پلاټ اندازه/ m2">
+                        <label class="form-label">طول</label>
+                        <input type="text" name="length" class="form-control mb-2" placeholder="طول">
+                    </div>
+
+                    <div class="col-4">
+                        <label class="form-label">عرض</label>
+                        <input type="text" name="width" class="form-control mb-2" placeholder="عرض">
                     </div>
 
                     <div class="col-4">
@@ -126,11 +131,8 @@
                     </div>
 
                     <div class="col-4">
-                        <label class="form-label"></label>
-                        <select name="duplicate" class="form-control">
-                            <option value="0">غیر تکرار</option>
-                            <option value="1">تکرار</option>
-                        </select>
+                        <label class="form-label">تکرار</label>
+                        <input type="number" name="duplicate" class="form-control mb-2" placeholder="تکرار">
                     </div>
 
                     <div class="col-4">

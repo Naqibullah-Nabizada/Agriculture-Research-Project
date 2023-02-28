@@ -33,6 +33,23 @@
                         </select>
                     </div>
 
+                    <div>
+                        <label class="form-label">د زده کړې حالت</label>
+                        <select name="shift" class="form-control mb-2">
+                            <option value="0" @if (old('shift', $department->shift) === 0) selected @endif>روزانه</option>
+                            <option value="1" @if (old('shift', $department->shift) === 1) selected @endif>شبانه</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="form-label">د زده کړې درجه</label>
+                        <select name="education_degree" class="form-control mb-2">
+                            <option value="0" @if (old('education_degree', $department->education_degree) === 0) selected @endif>لیسانس</option>
+                            <option value="1" @if (old('education_degree', $department->education_degree) === 1) selected @endif>ماستری</option>
+                            <option value="2" @if (old('education_degree', $department->education_degree) === 2) selected @endif>دکتورا</option>
+                        </select>
+                    </div>
+
                     <input type="submit" class="btn btn-warning my-2" value="ویرایش کردن">
                     <a href="{{ route('departments.index') }}" class="btn btn-secondary">بازگشت</a>
                 </form>

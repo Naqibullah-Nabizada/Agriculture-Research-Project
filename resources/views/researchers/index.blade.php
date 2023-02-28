@@ -33,12 +33,13 @@
                                 <th>لارښود استاد</th>
                                 <th>د پروژې پیل</th>
                                 <th>د پروژې ختم</th>
-                                <th>د پلاټ اندازه/ m2</th>
+                                <th>طول</th>
+                                <th>عرض</th>
                                 <th> پلاټونه</th>
                                 <th>ټریټمینټونه</th>
                                 <th>تکرار</th>
                                 <th>انځور</th>
-                                <th>د پروژې سافت</th>
+                                <th>سافت</th>
                                 <th class="text-center" style="width: fit-content"><i class="fa fa-cogs mx-2"></i>تنظیمات</th>
                             </tr>
                         </thead>
@@ -55,10 +56,11 @@
                                     <td>{{ $researcher->teacher->firstname }}</td>
                                     <td>{{ $researcher->start_of_project }}</td>
                                     <td>{{ $researcher->end_of_project }}</td>
-                                    <td>{{ $researcher->plot_size }}</td>
+                                    <td>{{ $researcher->length }}</td>
+                                    <td>{{ $researcher->width }}</td>
                                     <td>{{ $researcher->plots }}</td>
                                     <td>{{ $researcher->treatments }}</td>
-                                    <td>{{ $researcher->dublocate == 0 ? 'تائید شده' : 'تائید نشده' }}</td>
+                                    <td>{{ $researcher->duplicate}}</td>
                                     <td>
                                         <img src="{{ asset('files/photos/' . $researcher->photo) }}" width="30" height="40">
                                     </td>
@@ -66,13 +68,13 @@
                                     <td class="text-center">
                                         <a href="{{ route('researchers.show', $researcher->id) }}" class="btn btn-secondary btn-sm"><i class="fa fa-print"></i></a>
                                         <a href="{{ route('researchers.edit', $researcher->id) }}"
-                                            class="btn btn-sm btn-warning"><i class="fa fa-edit mx-1"></i></a>
+                                            class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
                                         <form action="{{ route('researchers.destroy', $researcher->id) }}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger delete">
-                                                <i class="fa fa-trash mx-1"></i></button>
+                                                <i class="fa fa-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>

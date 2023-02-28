@@ -6,7 +6,7 @@
     font-weight: normal;
 }
 
-* {
+body {
     margin: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
@@ -64,17 +64,13 @@ select#job {
 .id-card {
     width: 3.39in;
     height: 2.13in;
-    border: 1px solid #000;
-    border-radius: 10px;
-    margin: 30px 10px;
 }
 
 .id-card header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 40px;
-    border-radius: 10px 10px 0 0;
+    height: 60px;
     background-color: rgb(48, 85, 155);
     color: #fff;
 }
@@ -101,19 +97,19 @@ select#job {
 }
 
 .card-body main p#fullname {
-    top: 1px;
+    top: -.5rem;
 }
 
 .card-body main p#job_name {
-    top: 1.8rem;
+    top: 1.2rem;
 }
 
 .card-body main p#job_location {
-    top: 3.6rem;
+    top: 2.9rem;
 }
 
 .card-body main p#start_of_job {
-    top: 5.4rem;
+    top: 4.6rem;
 }
 
 .card-body main p {
@@ -125,23 +121,27 @@ select#job {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 2.15rem;
-    border-radius: 0 0 10px 10px;
+    height: 2rem;
     background-color: rgb(48, 85, 155);
     color: #fff;
-    font-size: small;
+    font-size: 13px !important;
 }
 
 .card-body aside {
     width: 22%;
 }
 
-.card-body aside img {
+.id-card header div h6{
+    margin: 0 !important;
+    font-weight: bold;
+}
+
+/* .card-body aside img {
     width: 4.5rem;
     height: 6rem;
     object-fit: contain;
     border-radius: 3px;
-}
+} */
 
 /* .card-body aside p{
     margin: 5px 0;

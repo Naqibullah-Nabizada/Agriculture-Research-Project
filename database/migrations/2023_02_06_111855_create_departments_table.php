@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('faculty_id')->constrained('faculties')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->tinyInteger('shift')->default(0);
+            $table->tinyInteger('education_degree')->default(0);
             $table->timestamps();
         });
     }

@@ -24,9 +24,10 @@ return new class extends Migration
             $table->foreignId('teacher_id')->constrained('teachers')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->string('area');
             $table->string('project_title');
-            $table->timestamp('start_of_project')->default(now());
-            $table->timestamp('end_of_project')->default(now());
-            $table->string('plot_size');
+            $table->date('start_of_project');
+            $table->date('end_of_project');
+            $table->string('length');
+            $table->string('width');
             $table->string('plots');
             $table->string('treatments');
             $table->tinyInteger('duplicate');
