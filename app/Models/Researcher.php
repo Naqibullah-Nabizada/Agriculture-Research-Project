@@ -25,4 +25,17 @@ class Researcher extends Model
     public function teacher(){
         return $this->belongsTo(Teacher::class);
     }
+
+
+    function jalali()
+    {
+        return verta($this->created_at)->format('Y-m-d');
+    }
+
+    public function FarsiDate($date)
+    {
+        $year = '1 years';
+        $end_date = date('Y-m-d', strtotime($date . $year));
+        return verta($end_date)->format('Y/m/d');
+    }
 }

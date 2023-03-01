@@ -6,12 +6,23 @@
 
 @section('content')
     <section>
-        <div class="col-12 mt-3">
-            <a href="{{ route('researchers.create') }}" class="btn btn-outline-success mb-1 fw-bold col-2 mx-4">تحقیق کننده
+        <div class="col-12 mt-3 d-flex justify-content-around flex-wrap">
+            <a href="{{ route('researchers.create') }}" class="btn btn-outline-success mb-1 fw-bold mx-4">تحقیق کننده
                 جدید<i class="fa fa-plus mx-2"></i></a>
-            <a href="{{ route('home') }}" class="btn btn-outline-secondary mb-1 col-1"><i
+            <a href="{{ route('home') }}" class="btn btn-outline-secondary mb-1"><i
                     class="fa fa-arrow-alt-circle-right mx-1"></i> بازگشت</a>
-            <span class="h4 text-center mt-3 col-5" style="margin: 0 13rem">لیست تحقیق کننده گان</span>
+            <span class="h4 text-center mt-2">لیست تحقیق کننده گان</span>
+            <div>
+                <form action="{{ route('search') }}" class="d-flex" method="GET">
+                    <select name="search_by" class="form-control">
+                        <option value="teacher_id">لارښود استاد</option>
+                        <option value="department_id">څانګه</option>
+                        <option value="project_title">د پروژې عنوان</option>
+                    </select>
+                    <input type="text" name="search" class="form-control" placeholder="جستجو">
+                    <button class="btn btn-outline-success mx-1"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
         </div>
 
         <div>
@@ -23,10 +34,10 @@
                     <table class="table table-sm table-bordered table-responsive table-striped text-center">
                         <thead class="table-dark">
                             <tr>
+                                <th>آی دی</th>
                                 <th>نوم</th>
                                 <th>تخلص</th>
                                 <th>ټولګی</th>
-                                <th>پوهنځی</th>
                                 <th>څانګه</th>
                                 <th>ساحه</th>
                                 <th>د پروژې عنوان</th>
@@ -40,16 +51,17 @@
                                 <th>تکرار</th>
                                 <th>انځور</th>
                                 <th>سافت</th>
-                                <th class="text-center" style="width: fit-content"><i class="fa fa-cogs mx-2"></i>تنظیمات</th>
+                                <th class="text-center" style="width: fit-content"><i class="fa fa-cogs mx-2"></i>تنظیمات
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($researchers as $researcher)
                                 <tr>
+                                    <td>{{ $researcher->kankor_id }}</td>
                                     <td>{{ $researcher->firstname }}</td>
                                     <td>{{ $researcher->lastname }}</td>
                                     <td>{{ $researcher->classes->name }}</td>
-                                    <td>{{ $researcher->faculty->name }}</td>
                                     <td>{{ $researcher->department->name }}</td>
                                     <td>{{ $researcher->area }}</td>
                                     <td>{{ $researcher->project_title }}</td>
@@ -60,13 +72,13 @@
                                     <td>{{ $researcher->width }}</td>
                                     <td>{{ $researcher->plots }}</td>
                                     <td>{{ $researcher->treatments }}</td>
-                                    <td>{{ $researcher->duplicate}}</td>
+                                    <td>{{ $researcher->duplicate }}</td>
                                     <td>
-                                        <img src="{{ asset('files/photos/' . $researcher->photo) }}" width="30" height="40">
+                                        <img src="{{ asset('files/photos/' . $researcher->photo) }}" width="30"
+                                            height="40">
                                     </td>
                                     <td>{{ $researcher->soft == null ? 'ندارد' : 'دارد' }}</td>
                                     <td class="text-center">
-                                        <a href="{{ route('researchers.show', $researcher->id) }}" class="btn btn-secondary btn-sm"><i class="fa fa-print"></i></a>
                                         <a href="{{ route('researchers.edit', $researcher->id) }}"
                                             class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
                                         <form action="{{ route('researchers.destroy', $researcher->id) }}" method="POST"
@@ -81,6 +93,11 @@
                             @endforeach
                         </tbody>
                     </table>
+
+                    <div class="text-center">
+                        <a href="{{ route('print') }}" class="btn btn-secondary btn-sm"><i
+                                class="fa fa-print mx-1"></i>پرنت</a>
+                    </div>
                 @else
                     <div class="text-center mt-4">
                         <h4 class="p-3">چیزی یافت نشد!</h4>

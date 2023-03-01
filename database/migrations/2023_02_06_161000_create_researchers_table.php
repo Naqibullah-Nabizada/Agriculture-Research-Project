@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('father_name');
+            $table->string('kankor_id');
             $table->foreignId('class_id')->constrained('classes')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreignId('faculty_id')->constrained('faculties')->onDelete('CASCADE')->onUpdate('CASCADE');
             $table->foreignId('department_id')->constrained('departments')->onDelete('CASCADE')->onUpdate('CASCADE');

@@ -47,6 +47,16 @@
                     </div>
 
                     <div class="col-4">
+                        <label class="form-label">د کانکور آی دی</label>
+                        <input type="text" name="kankor_id"
+                            class="form-control mb-2 @error('father_name') is-invalid @enderror" placeholder="د کانکور آی دی"
+                            value="{{ old('kankor_id') }}" required>
+                        @error('kankor_id')
+                            <p class="text-danger my-2">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="col-4">
                         <label class="form-label">ټولګی</label>
                         <select name="class_id" class="form-control mb-2">
                             @foreach ($classes as $class)
@@ -64,7 +74,7 @@
                         </select>
                     </div>
 
-                    <div class="col-4">
+                    <div class="col-4 d-none">
                         <label class="form-label">پوهنځی</label>
                         <select name="faculty_id" class="form-control mb-2" id="faculty">
                             @foreach ($faculties as $faculty)
@@ -116,12 +126,12 @@
                     </div>
 
                     <div class="col-4">
-                        <label class="form-label">طول</label>
+                        <label class="form-label">د پلاټ اندازه</label>
                         <input type="text" name="length" class="form-control mb-2" placeholder="طول">
                     </div>
 
                     <div class="col-4">
-                        <label class="form-label">عرض</label>
+                        <label class="form-label">د پلاټ اندازه</label>
                         <input type="text" name="width" class="form-control mb-2" placeholder="عرض">
                     </div>
 

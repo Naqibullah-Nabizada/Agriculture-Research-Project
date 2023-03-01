@@ -31,6 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/departments', DepartmentController::class);
     Route::resource('/teachers', TeacherController::class);
     Route::resource('/researchers', ResearcherController::class);
+    Route::get('/print', [ResearcherController::class, 'print'])->name('print');
+    Route::get('/search', [ResearcherController::class, 'search'])->name('search');
+
     Route::resource('/classes', ClassController::class);
     Route::get('/get-departments/{faculty}', [TeacherController::class, 'getDepartment'])->name('getDepartment');
 });

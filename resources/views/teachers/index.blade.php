@@ -19,6 +19,7 @@
             <table class="table table-bordered table-hover table-sm">
                 <thead>
                     <tr>
+                        <th>آی دی</th>
                         <th>نام</th>
                         <th>تخلص</th>
                         <th>نام پدر</th>
@@ -30,6 +31,7 @@
                 <tbody>
                     @foreach ($teachers as $teacher)
                         <tr>
+                            <td>{{ $teacher->id }}</td>
                             <td>{{ $teacher->firstname }}</td>
                             <td>{{ $teacher->lastname }}</td>
                             <td>{{ $teacher->father_name }}</td>

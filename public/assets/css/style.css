@@ -64,6 +64,8 @@ select#job {
 .id-card {
     width: 3.39in;
     height: 2.13in;
+    margin: .18rem !important;
+    border: 1px solid #8b8a8a;
 }
 
 .id-card header {
@@ -132,16 +134,16 @@ select#job {
 }
 
 .id-card header div h6{
-    margin: 0 !important;
+    margin: 3px 0 !important;
     font-weight: bold;
+    font-size: small;
 }
 
-/* .card-body aside img {
-    width: 4.5rem;
-    height: 6rem;
-    object-fit: contain;
-    border-radius: 3px;
-} */
+.card-body aside img {
+    height: 5rem;
+    object-fit: cover;
+    border: 1px solid #8b8a8a;
+}
 
 /* .card-body aside p{
     margin: 5px 0;

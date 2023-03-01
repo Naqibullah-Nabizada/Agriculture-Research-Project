@@ -18,7 +18,7 @@ class ResearcherController extends Controller
      */
     public function index()
     {
-        $researchers = Researcher::paginate(10);
+        $researchers = Researcher::paginate(8);
         return view('researchers.index', compact('researchers'));
     }
 
@@ -80,10 +80,12 @@ class ResearcherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+
+    public function print()
     {
-        $researcher = Researcher::FindOrFail($id);
-        return view('researchers.show', compact('researcher'));
+        $researchers = Researcher::paginate(8);
+        return view('researchers.print', compact('researchers'));
     }
 
     /**
@@ -163,4 +165,11 @@ class ResearcherController extends Controller
         $researcher->destroy($id);
         return redirect()->route('researchers.index')->with('swal-success', 'تحقیق کننده با موفقیت حذف شد.');
     }
+
+
+    public function search(Request $request){
+        $researchers = Researcher::where($request->search_by, $request->search)->paginate(8);
+        return view('researchers.index', compact('researchers'));
+    }
+
 }
